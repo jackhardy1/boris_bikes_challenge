@@ -14,7 +14,7 @@ describe DockingStation do
   end
 
   it "Will dock a bike" do
-    expect(subject.dock).to change{subject.spaces}.by(-1)
+    expect{subject.dock}.to change{subject.spaces}.by(-1)
   end
 
 end
