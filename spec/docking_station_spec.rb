@@ -13,8 +13,9 @@ describe DockingStation do
     expect(subject.release_bike.working?).to eq true
   end
 
-  it "Will dock a bike" do
-    expect{subject.dock}.to change{subject.spaces}.by(-1)
-  end
+  it {should respond_to(:dock).with(1).argument}
 
+  it "should accept bike as argument" do
+      expect(subject.dock()).to eq docked_bike
+end
 end

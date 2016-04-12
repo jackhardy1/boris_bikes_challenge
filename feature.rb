@@ -4,5 +4,6 @@ require_relative './lib/bike.rb'
 
 station = DockingStation.new
 bike = station.release_bike
-bike.working?
 p bike.dock
+# bike.working?
+# bike.dock

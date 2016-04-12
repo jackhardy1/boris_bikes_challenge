@@ -2,18 +2,12 @@ require_relative 'bike'
 
 class DockingStation
 
-  attr_reader :spaces
-
-  def initialize
-    @spaces = 10
-  end
-
   def release_bike
-   Bike.new
+   bike = Bike.new #this is a bad design (use appedices injection)
   end
 
-  def dock
-    @spaces -= 1
-  end
+def dock(bike)
+  docked_bike = bike
+end
 
 end
