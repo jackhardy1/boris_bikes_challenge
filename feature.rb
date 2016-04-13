@@ -5,4 +5,4 @@ require_relative './lib/bike.rb'
 station = DockingStation.new
 bike = Bike.new
 
-p station.dock(bike)
+20.times{station.dock(bike)}
