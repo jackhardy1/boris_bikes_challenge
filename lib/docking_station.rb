@@ -9,6 +9,7 @@ attr_reader :bikes
 
   def release_bike
       raise "No bikes left" if @bikes.count == 0
+      @bikes.pop
 #use apprendice injection (for next step)
   end
 
