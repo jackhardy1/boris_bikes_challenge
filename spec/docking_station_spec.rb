@@ -13,9 +13,12 @@ describe DockingStation do
     expect(subject.release_bike.working?).to eq true
   end
 
-  it {should respond_to(:dock).with(1).argument}
+  it {should respond_to(:dock).with(1).argument} #Done!
 
-  it "should accept bike as argument" do
-      expect(subject.dock()).to eq docked_bike
+  it "should show me a docked_bike" do
+  station = DockingStation.new
+  bike = station.release_bike
+  docked = station.dock(bike)
+  expect(docked).to eq bike
 end
 end
