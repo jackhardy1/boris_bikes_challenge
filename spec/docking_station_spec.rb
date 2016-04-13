@@ -11,16 +11,29 @@ describe DockingStation do
     expect(bike.working?).to eq true
   end
 
-  it {should respond_to(:dock).with(1).argument} #Done!
+ #Done!
 
-  it "should show me a docked_bike" do
-    bike = Bike.new
-    shoreditch_station = DockingStation.new
-    shoreditch_station.dock(bike)
-    expect(shoreditch_station.docked_bike).to eq bike
-end
+  # it "should show me a docked_bike" do
+  #   bike = Bike.new
+  #   shoreditch_station = DockingStation.new
+  #   shoreditch_station.dock(bike)
+  #   expect(shoreditch_station.docked_bike).to eq bike
+  # end
 
+  #we took the above out, because it is no longer relevant. It conflicts with "raise an error when no space left..."
+describe "#release_bike" do
   it "raises an error when no bikes available" do
     expect{subject.release_bike}.to raise_error("No bikes left")
+  end
+
+describe "#dock" do
+  it {should respond_to(:dock).with(1).argument}
+  it "raises an error when no space left in docking station" do
+    hoxton_station = DockingStation.new
+    bike = Bike.new
+    expect{hoxton_station.dock(bike)}.to raise_error("No space left")
+  end
+
+end
 end
 end
