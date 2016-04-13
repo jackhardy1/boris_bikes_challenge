@@ -7,15 +7,15 @@ attr_reader :bikes
     @bikes = []
   end
 
-  def release_bike
+    def release_bike
       raise "No bikes left" if @bikes.count == 0
       @bikes.pop
-#use apprendice injection (for next step)
-  end
+      #use apprendice injection (for next step)
+    end
 
-  def dock(bike)
-    raise "No space left" if @bikes.count >= 20
-      @bikes << bike
-    # @bikes = bikes
-  end
+      def dock(bike)
+        raise "No space left" if @bikes.count >= 20
+        @bikes << bike
+        # @bikes = bikes
+      end
 end
