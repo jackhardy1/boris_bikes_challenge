@@ -18,7 +18,8 @@ describe DockingStation do
   it "should show me a docked_bike" do
   station = DockingStation.new
   bike = station.release_bike
-  docked = station.dock(bike)
+  station.dock(bike)
+  docked = station.docked_bike
   expect(docked).to eq bike
 end
 end
