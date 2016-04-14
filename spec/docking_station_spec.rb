@@ -38,4 +38,6 @@ describe DockingStation do
       expect{hoxton_station.dock(Bike.new)}.to raise_error("No space left")
     end
   end
+
+
 end
