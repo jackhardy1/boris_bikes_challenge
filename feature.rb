@@ -4,3 +4,4 @@ require_relative './lib/bike.rb'
 
 station = DockingStation.new
 bike = Bike.new
+station.full?
